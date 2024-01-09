@@ -1,0 +1,16 @@
+<launch>
+
+    <arg name="cmd" default = "Hello Class!!" />
+    <node name="Remote" pkg="Quiz_6452500406" type="RemoteGui_Code.py" output="screen">
+        <param name="cmd" value="$(arg cmd)"/>
+    </node>
+
+
+    <node name="Motion" pkg="Quiz_6452500406" type="MotionGui_Code.py" output="screen">
+    </node>
+
+    <node name="Turtlesim" pkg="turtlesim" type="turtlesim_node" output="screen">
+    </node>
+    
+
+</launch>
